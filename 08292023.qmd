@@ -1,0 +1,88 @@
+---
+title: "Untitled"
+format: html
+---
+
+We will install 'tidyverse' packages using the following command in the **console**.
+
+
+'install.packages('tidyverse')'
+
+Load the package
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+print(mpg)
+```
+
+```{r}
+head(mpg, n = 8)
+```
+```{r}
+tail(mpg, n=8)
+```
+```{r}
+slice(mpg, 10:20)
+```
+
+```{r}
+dim(mpg)
+```
+Get number of rows
+
+```{r}
+nrow(mpg)
+```
+Get number of columns
+
+```{r}
+ncol(mpg)
+```
+
+Get class
+```{r}
+class(mpg)
+```
+
+Get Column names
+
+```{r}
+colnames(mpg)
+```
+
+## Subsetting columns using select() function
+
+```{r}
+select(mpg, model, year)
+```
+
+```{r}
+select(mpg, starts_with("c"))
+```
+
+```{r}
+select(mpg, ends_with("l"))
+```
+```{r}
+select(mpg, contains("e"))
+```
+
+## subsetting rows
+```{r}
+filter(mpg, year == 2008, cyl >= 6)
+```
+```{r}
+filter(mpg, (year == 2008 & cyl >= 6))
+```
+
+```{r}
+dt = readr::read_csv("C:\\Users\\Adminn\\Desktop\\MSDA\\Fall 2023\\Visualization&Comm\\Data\\svcckww1jskrstnz_csv.zip")
+```
+
+```{r}
+select(dt, 1:7)
+```
+
